@@ -291,6 +291,7 @@ textarea {
   .projects__row:last-child {
     margin-bottom: 0; }
   .projects__row-img-cont {
+    max-width: 400px;
     overflow: hidden; }
   .projects__row-img {
     width: 100%;
@@ -518,7 +519,7 @@ textarea {
       color: #0062b9; }
   .header__logo-img-cont {
     width: 5rem;
-    height: 5rem;
+    height: 6rem;
     border-radius: 50px;
     overflow: hidden;
     margin-right: 1.5rem;
@@ -702,3 +703,64 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+
+/* --- CONTACT DETAILS STYLING --- */
+
+.contact__details-container {
+  display: flex; /* Aligns cards side-by-side */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 5rem; /* Creates space between the cards */
+  margin-top: 8rem; /* Adds space below the heading */
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.contact__detail-item {
+  text-align: center;
+  padding: 2.5rem 3rem;
+  background: rgba(0, 0, 0, 0.2); /* A semi-transparent background */
+  border-radius: 10px;
+  width: 320px; /* Gives the cards a uniform width */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__detail-item:hover {
+  transform: translateY(-7px); /* Lifts the card on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact__detail-item i {
+  font-size: 3.5rem; /* Icon size */
+  margin-bottom: 1.5rem;
+  color: #facf0f; /* A vibrant color for the icon, change as you like */
+}
+
+.contact__detail-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff; /* White text for contrast on dark background */
+}
+
+.contact__detail-link {
+  font-size: 1.6rem;
+  color: #eee; /* Slightly dimmer color for the link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact__detail-link:hover {
+  color: #facf0f; /* Highlight color on hover */
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+  .contact__details-container {
+    flex-direction: column; /* Stacks the cards vertically */
+    align-items: center; /* Centers the stacked cards */
+    gap: 3rem;
+  }
+}
+
